@@ -1,0 +1,19 @@
+[package]
+name = "figcraft-play-host"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+description = "FigCraft Play window host: a webview (wry) in its own process, driven by JSON lines on stdin. A crash here never takes the editor down (docs/FORK.md)"
+
+[lints]
+workspace = true
+
+[dependencies]
+figcraft-play = { workspace = true }
+serde_json = { workspace = true }
+log = { workspace = true }
+# The webview. Apache-2.0 OR MIT (on the licence allowlist); desktop only.
+wry = "0.57"
+tao = "0.37"
+webbrowser = { workspace = true }
